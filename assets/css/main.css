@@ -1,17 +1,6 @@
-/**
-* Template Name: Clinic
-* Template URL: https://bootstrapmade.com/clinic-bootstrap-template/
-* Updated: Jul 23 2025 with Bootstrap v5.3.7
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
 @charset "UTF-8";
 
-/*--------------------------------------------------------------
-# Font & Color Variables
-# Help: https://bootstrapmade.com/color-system/
---------------------------------------------------------------*/
+
 /* Fonts */
 :root {
   --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -19,38 +8,37 @@
   --nav-font: "Lato",  sans-serif;
 }
 
-/* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
+/* Global Colors - Dark Brown + Black Theme */
 :root { 
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #3c4049; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #112344; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #175cdd; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  --background-color: #0D0D0C; /* Deep off-black background */
+  --default-color: #E4E0DC; /* Warm beige for main text */
+  --heading-color: #F5F1EB; /* Soft off-white for headings */
+  --accent-color: #A9744F; /* Rich brown accent for CTAs, links */
+  --surface-color: #1A1817; /* Dark surface for cards/boxes */
+  --contrast-color: #ffffff; /* Pure white for text on accents */
 }
 
-/* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
+/* Nav Menu Colors */
 :root {
-  --nav-color: #3c4049;  /* The default color of the main navmenu links */
-  --nav-hover-color: #175cdd; /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #3c4049; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #175cdd; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-color: #E4E0DC;  /* Default nav links */
+  --nav-hover-color: #A9744F; /* Accent brown on hover */
+  --nav-mobile-background-color: #1A1817; /* Dark surface for mobile nav */
+  --nav-dropdown-background-color: #1A1817; /* Dropdown background */
+  --nav-dropdown-color: #E4E0DC; /* Dropdown link color */
+  --nav-dropdown-hover-color: #A9744F; /* Accent brown hover in dropdown */
 }
 
-/* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
-
+/* Presets */
 .light-background {
-  --background-color: #f4f8ff;
-  --surface-color: #ffffff;
+  --background-color: #2A2523; /* Softer warm dark brown */
+  --surface-color: #1A1817;
 }
 
 .dark-background {
-  --background-color: #021418;
-  --default-color: #ffffff;
-  --heading-color: #ffffff;
-  --surface-color: #11262a;
+  --background-color: #0B0A09; /* Pure black-brown */
+  --default-color: #E4E0DC;
+  --heading-color: #F5F1EB;
+  --surface-color: #1A1817;
   --contrast-color: #ffffff;
 }
 
@@ -93,7 +81,7 @@ h6 {
 ------------------------------*/
 .php-email-form .error-message {
   display: none;
-  background: #df1529;
+  background: #B8412F; /* dark earthy red for error */
   color: #ffffff;
   text-align: left;
   padding: 15px;
@@ -104,7 +92,7 @@ h6 {
 .php-email-form .sent-message {
   display: none;
   color: #ffffff;
-  background: #059652;
+  background: #2C8C5B; /* muted green for success */
   text-align: center;
   padding: 15px;
   margin-bottom: 24px;
@@ -135,7 +123,6 @@ h6 {
   0% {
     transform: rotate(0deg);
   }
-
   100% {
     transform: rotate(360deg);
   }
@@ -145,12 +132,12 @@ h6 {
 # Global Header
 --------------------------------------------------------------*/
 .header {
-  --background-color: rgba(255, 255, 255, 0);
+  --background-color: rgba(13, 13, 12, 0); /* transparent off-black */
   color: var(--default-color);
   transition: all 0.5s;
   z-index: 997;
   background-color: var(--background-color);
-  box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0 18px rgba(0, 0, 0, 0.5); /* stronger shadow for dark theme */
 }
 
 .header .topbar {
@@ -173,7 +160,6 @@ h6 {
 }
 
 @media (max-width: 575px) {
-
   .header .topbar .contact-info i a,
   .header .topbar .contact-info i span {
     font-size: 13px;
@@ -231,7 +217,7 @@ h6 {
 /* Global Header on Scroll
 ------------------------------*/
 .scrolled .header {
-  --background-color: #ffffff;
+  --background-color: #1A1817; /* dark brown surface when scrolled */
 }
 
 /*--------------------------------------------------------------
@@ -326,7 +312,7 @@ h6 {
     transition: 0.3s;
     border-radius: 4px;
     z-index: 99;
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.4); /* deeper shadow for dark dropdown */
   }
 
   .navmenu .dropdown ul li {
@@ -369,6 +355,7 @@ h6 {
     visibility: visible;
   }
 }
+
 
 /* Mobile Navigation */
 @media (max-width: 1199px) {
@@ -461,35 +448,35 @@ h6 {
   }
 
   .navmenu .dropdown ul ul {
-    background-color: rgba(33, 37, 41, 0.1);
-  }
+  background-color: rgba(15, 15, 15, 0.95); /* deep black overlay for submenus */
+}
 
-  .navmenu .dropdown>.dropdown-active {
-    display: block;
-    background-color: rgba(33, 37, 41, 0.03);
-  }
+.navmenu .dropdown > .dropdown-active {
+  display: block;
+  background-color: rgba(47, 35, 29, 0.9); /* warm dark brown active state */
+}
 
   .mobile-nav-active {
     overflow: hidden;
   }
 
   .mobile-nav-active .mobile-nav-toggle {
-    color: #fff;
-    position: absolute;
-    font-size: 32px;
-    top: 15px;
-    right: 15px;
-    margin-right: 0;
-    z-index: 9999;
-  }
+  color: #D4AF37; /* elegant gold for toggle icon */
+  position: absolute;
+  font-size: 32px;
+  top: 15px;
+  right: 15px;
+  margin-right: 0;
+  z-index: 9999;
+}
 
-  .mobile-nav-active .navmenu {
-    position: fixed;
-    overflow: hidden;
-    inset: 0;
-    background: rgba(33, 37, 41, 0.8);
-    transition: 0.3s;
-  }
+.mobile-nav-active .navmenu {
+  position: fixed;
+  overflow: hidden;
+  inset: 0;
+  background: rgba(15, 15, 15, 0.95); /* deep black overlay */
+  transition: 0.3s;
+}
 
   .mobile-nav-active .navmenu>ul {
     display: block;
@@ -1163,9 +1150,13 @@ section,
 }
 
 .hero .hero-content .hero-actions .btn.btn-primary:hover {
-  background: color-mix(in srgb, var(--accent-color), black 10%);
-  transform: translateY(-2px);
+  background: linear-gradient(135deg, #D4AF37, #8B5E3C); /* gold → brown gradient */
+  color: #fff; /* ensures text is readable */
+  transform: translateY(-3px) scale(1.02); /* smoother lift */
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.35); /* glowing premium shadow */
+  transition: all 0.3s ease;
 }
+
 
 .hero .hero-content .hero-actions .btn.btn-outline {
   color: var(--accent-color);
@@ -1517,10 +1508,13 @@ section,
 }
 
 .home-about .about-content .cta-section .btn-primary:hover {
-  background-color: color-mix(in srgb, var(--accent-color), black 10%);
-  transform: translateY(-2px);
-  color: var(--contrast-color);
+  background: linear-gradient(135deg, #8B5E3C, #D4AF37); /* warm brown → gold gradient */
+  transform: translateY(-3px) scale(1.02);
+  color: #fff; /* keeps text clean against gradient */
+  box-shadow: 0 6px 20px rgba(139, 94, 60, 0.35); /* subtle brown glow */
+  transition: all 0.3s ease;
 }
+
 
 .home-about .about-content .cta-section .btn-secondary {
   color: var(--heading-color);
@@ -1887,12 +1881,13 @@ section,
 }
 
 .featured-departments .emergency-banner {
-  background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), #667eea 30%));
+  background: linear-gradient(135deg, #8B5E3C, #000000); /* dark brown → black */
   border-radius: 20px;
   padding: 40px;
   margin-top: 60px;
-  color: var(--contrast-color);
+  color: #ffffff; /* clean contrast */
 }
+
 
 .featured-departments .emergency-banner h3 {
   color: var(--contrast-color);
@@ -2444,12 +2439,13 @@ section,
 }
 
 .find-a-doctor .doctor-profile .profile-header .doctor-avatar .status-indicator.available {
-  background: #10b981;
+  background: #22c55e; /* richer emerald green */
 }
 
 .find-a-doctor .doctor-profile .profile-header .doctor-avatar .status-indicator.busy {
-  background: #f59e0b;
+  background: #d4af37; /* elegant gold tone instead of flat amber */
 }
+
 
 .find-a-doctor .doctor-profile .profile-header .doctor-avatar .status-indicator.offline {
   background: color-mix(in srgb, var(--default-color), transparent 40%);
@@ -2562,10 +2558,11 @@ section,
 }
 
 .find-a-doctor .doctor-profile .action-buttons .btn-primary:hover {
-  background: color-mix(in srgb, var(--accent-color), black 10%);
-  border-color: color-mix(in srgb, var(--accent-color), black 10%);
+  background: color-mix(in srgb, var(--accent-color), #000000 15%);
+  border-color: color-mix(in srgb, var(--accent-color), #000000 15%);
   color: var(--contrast-color);
 }
+
 
 .find-a-doctor .btn-view-all {
   display: inline-flex;
@@ -5094,7 +5091,7 @@ section,
 .gallery .gallery-links .preview-link,
 .gallery .gallery-links .details-link {
   font-size: 20px;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 215, 0, 0.6); /* gold tint with transparency */
   transition: 0.3s;
   line-height: 1.2;
   margin: 30px 8px 0 8px;
@@ -5102,8 +5099,9 @@ section,
 
 .gallery .gallery-links .preview-link:hover,
 .gallery .gallery-links .details-link:hover {
-  color: #ffffff;
+  color: #FFD700; /* solid gold on hover */
 }
+
 
 .gallery .gallery-links .details-link {
   font-size: 30px;
@@ -5124,11 +5122,11 @@ section,
 }
 
 .glightbox-clean .gslide-description {
-  background: #272727;
+  background: #1a1a1a; /* deep black-brown tone for luxury feel */
 }
 
 .glightbox-clean .gslide-title {
-  color: rgba(255, 255, 255, 0.8);
+  color: #FFD700; /* gold for premium highlight */
   margin: 0;
 }
 
